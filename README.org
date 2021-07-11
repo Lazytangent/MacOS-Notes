@@ -39,3 +39,13 @@ Node.js v12 or v14. I personally have both available, just in case.
 
 You might also consider making a duplicate of your terminal app that only runs
 in Rosetta 2 or the =x86_64= architecture.
+
+** MacOS Monterey and Issues Running on Port 5000
+As of the time of writing this (<2021-07-11 Sun>), the current version of MacOS
+12 Monterey that is available (Public Beta) uses ports 5000 and 7000 when you
+have =AirPlay Receiver= active in the =Sharing= settings in the =System
+Preferences= menu. This blocks you from running any development servers on those
+ports since they are in use by the system. To open up those ports, you can
+un-select the =AirPlay Receiver= option in the =Sharing= settings. This will
+close down the services running on both ports immediately, allowing you to run
+your servers on ports 5000 and 7000 again.
