@@ -9,3 +9,33 @@ NOT support the M1 ARM architecture. You can, however, install those versions
 with Node.js on an M1 Mac by using the Rosetta 2 translation layer when doing
 the install so that those Node.js versions get compiled under the =x86_64=
 architecture.
+
+*** Installing Node.js Versions Under v15 on an M1 Mac
+My personal preference is to install Node.js versions using the [[https://github.com/nvm-sh/nvm][nvm]] CLI tool, so
+that you can have multiple versions of Node.js on your machine at any point in
+time, making development much easier if you have projects that require different
+versions of Node.js.
+
+You can install the [[https://github.com/nvm-sh/nvm][nvm]] CLI tool by using the =curl= script available on their
+README. This script changes from time to time as they push out updates to their
+program, so I won't leave it here.
+
+To run your shell in the =x86_64= architecture, you can run the following
+command:
+
+#+BEGIN_SRC shell
+arch -x86_64 $SHELL
+#+END_SRC
+
+You can check which architecture you're currently using in the shell by running
+the ~arch~ command. If you ran it once before running the command to change
+architectures, then you should've gotten =arm64= as your response. Then, if you
+ran the ~arch~ command after changing the architecture of your shell, then you
+should have gotten =i386= as your response.
+
+In the =x86_64= architecture version of your shell, use =nvm= to install the
+versions of Node.js that aren't natively supported on ARM. I would suggest
+Node.js v12 or v14. I personally have both available, just in case.
+
+You might also consider making a duplicate of your terminal app that only runs
+in Rosetta 2 or the =x86_64= architecture.
