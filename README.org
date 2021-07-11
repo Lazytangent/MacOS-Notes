@@ -1,0 +1,11 @@
+#+TITLE: MacOS Notes
+
+This repository is a compilation of the things I've noticed and learned while
+using MacOS for software development.
+
+** M1 Macs and Node.js
+As of the time of writing this (<2021-07-11 Sun>), Node.js versions under 15 do
+NOT support the M1 ARM architecture. You can, however, install those versions
+with Node.js on an M1 Mac by using the Rosetta 2 translation layer when doing
+the install so that those Node.js versions get compiled under the =x86_64=
+architecture.
